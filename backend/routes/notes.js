@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { Note, Subject, Revision } = require('../models');
 
+
 // Obtener notas por asignatura
 router.get('/subject/:subjectId', async (req, res) => {
   const notes = await Note.findAll({

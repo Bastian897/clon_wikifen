@@ -18,3 +18,4 @@
 - `DELETE /api/subjects/:id` – Eliminar asignatura.
 - `GET /api/revisions/:table/:rowId` – Ver historial de una fila.
 - `POST /api/revisions/:table/:rowId/rollback/:revId` – Hacer rollback a una revisión.
+
