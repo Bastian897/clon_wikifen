@@ -24,5 +24,4 @@ router.post('/login', async (req, res) => {
   res.json({ message: 'Logged in', userId: user.id });
 });
 
-
 module.exports = router;

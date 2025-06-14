@@ -12,12 +12,16 @@ clon_wikifen/
 │   │   ├── professor.js
 │   │   ├── subject.js
 │   │   ├── evaluation.js
-│   │   └── note.js
+│   │   ├── note.js
+│   │   └── revision.js
 │   └── routes/
 │       ├── auth.js
 │       ├── professors.js
 │       ├── evaluations.js
-│       └── notes.js
+│       ├── notes.js
+│       ├── subjects.js
+│       └── revisions.js
+
 ├── frontend/
 │   ├── package.json
 │   └── src/

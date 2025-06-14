@@ -1,3 +1,4 @@
+
 const { Sequelize, DataTypes } = require('sequelize');
 const config = require('../config/database');
 
@@ -32,11 +33,11 @@ Evaluation.belongsTo(User, { as: 'author' });
 Note.belongsTo(Subject);
 Note.belongsTo(User, { as: 'author' });
 
-// Exportar
 module.exports = {
   sequelize,
   Sequelize,
   User,
+
   Teacher,
   Professor,
   Subject,
@@ -44,4 +45,3 @@ module.exports = {
   Evaluation,
   History,
 };
-
