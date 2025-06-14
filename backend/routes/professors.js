@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { Professor, Subject, Revision } = require('../models');
+
+const { Professor, Subject } = require('../models');
 
 // Obtener todos los profesores
 router.get('/', async (req, res) => {
@@ -21,6 +22,7 @@ router.post('/', async (req, res) => {
 // Actualizar profesor
 router.put('/:id', async (req, res) => {
   try {
+
     const original = await Professor.findByPk(req.params.id);
     await Professor.update(req.body, { where: { id: req.params.id } });
     const updated = await Professor.findByPk(req.params.id);
@@ -46,6 +48,7 @@ router.delete('/:id', async (req, res) => {
     diff: { before: original, after: null },
     userId: req.body.userId || null
   });
+
   res.json({ message: 'deleted' });
 });
 

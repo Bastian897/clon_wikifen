@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { Note, Subject, Revision } = require('../models');
+
+const { Note, Subject } = require('../models');
+
 
 // Obtener notas por asignatura
 router.get('/subject/:subjectId', async (req, res) => {
@@ -55,5 +57,6 @@ router.delete('/:id', async (req, res) => {
   });
   res.json({ message: 'deleted' });
 });
+
 
 module.exports = router;
