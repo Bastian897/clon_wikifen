@@ -1,11 +1,29 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/noteController');
 
-router.get('/', controller.listNotes);
-router.post('/', controller.createNote);
-router.get('/:id', controller.getNote);
-router.put('/:id', controller.updateNote);
-router.delete('/:id', controller.deleteNote);
+const { Note, Subject } = require('../models');
+
+// Obtener notas por asignatura
+router.get('/subject/:subjectId', async (req, res) => {
+  const notes = await Note.findAll({
+    where: { subjectId: req.params.subjectId }
+  });
+  res.json(notes);
+});
+
+// Crear nota
+router.post('/subject/:subjectId', async (req, res) => {
+  try {
+    const note = await Note.create({
+      subjectId: req.params.subjectId,
+      title: req.body.title,
+      content: req.body.content,
+      authorId: req.body.userId || null
+    });
+    res.json(note);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
 
 module.exports = router;

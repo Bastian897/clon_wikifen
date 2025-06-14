@@ -1,5 +1,4 @@
 # ClonFen
-
 ClonFen es una aplicación web tipo wiki inspirada en Wikifen para estudiantes de la FEN de la Universidad de Chile. El proyecto incluye un backend en Node.js/Express con Sequelize y un frontend minimal en React.
 
 ## Estructura de Carpetas
@@ -36,3 +35,8 @@ El archivo [`docs/database_schema.sql`](docs/database_schema.sql) describe las t
 ## Frontend
 
 El frontend incluye componentes simples de React que consumen los endpoints anteriores. Para un ejemplo mínimo revisa [`frontend/src/App.js`](frontend/src/App.js).
+=======
+Este proyecto es un ejemplo de clon minimal de Wikifen. Contiene un backend en Node.js/Express con Sequelize y un frontend en React.
+
+Consulta los documentos en `docs/` para el esquema de base de datos, la estructura de carpetas y ejemplos de endpoints.
+

@@ -1,11 +1,10 @@
 module.exports = (sequelize, DataTypes) => {
-
-  const Note = sequelize.define('note', {
-    title: {
+  const Subject = sequelize.define('subject', {
+    name: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    content: DataTypes.TEXT
+    description: DataTypes.TEXT
   });
-  return Note;
+  return Subject;
 };
