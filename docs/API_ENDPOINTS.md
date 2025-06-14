@@ -10,7 +10,6 @@
 - `POST /api/evaluations/:professorId` – Crear evaluación.
 - `GET /api/notes/subject/:subjectId` – Ver apuntes de una asignatura.
 - `POST /api/notes/subject/:subjectId` – Crear apunte.
-
 - `PUT /api/notes/:id` – Actualizar apunte.
 - `DELETE /api/notes/:id` – Eliminar apunte.
 - `GET /api/subjects` – Listar asignaturas.

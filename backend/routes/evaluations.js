@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-
 const { Evaluation, Professor } = require('../models');
 
 // Obtener evaluaciones de un profesor

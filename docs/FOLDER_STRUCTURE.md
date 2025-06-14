@@ -21,7 +21,6 @@ clon_wikifen/
 │       ├── notes.js
 │       ├── subjects.js
 │       └── revisions.js
-
 ├── frontend/
 │   ├── package.json
 │   └── src/
