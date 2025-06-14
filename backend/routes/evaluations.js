@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+
 const { Evaluation, Professor } = require('../models');
 
 // Obtener evaluaciones de un profesor
@@ -24,5 +25,4 @@ router.post('/:professorId', async (req, res) => {
     res.status(400).json({ error: err.message });
   }
 });
-
 module.exports = router;

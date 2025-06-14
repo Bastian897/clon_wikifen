@@ -5,10 +5,12 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       validate: {
         min: 1,
-        max: 5
+        max: 5,
       }
     },
-    comment: DataTypes.TEXT
+    comment: DataTypes.TEXT,
   });
+
   return Evaluation;
 };
+

@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+
 const { User } = require('../models');
 const bcrypt = require('bcrypt');
 
@@ -22,5 +23,6 @@ router.post('/login', async (req, res) => {
   if (!ok) return res.status(400).json({ error: 'Invalid password' });
   res.json({ message: 'Logged in', userId: user.id });
 });
+
 
 module.exports = router;
